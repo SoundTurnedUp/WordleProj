@@ -1,0 +1,37 @@
+string[] ReadWordleFile()
+{
+    string[] wordsOnFile = File.ReadAllLines("WordleAnswers.txt"); //Puts all words on file into an array
+    string[] wordleAnswers = new string[wordsOnFile.Length];
+    for (int i = 0; i < wordsOnFile.Length; i++)
+    {
+        wordleAnswers = wordsOnFile[i].Split(' '); //splits words into individual elements in an array
+    }
+    return wordleAnswers;
+}
+void WordleToday()
+{
+    string[] wordleAnswers = ReadWordleFile();
+
+}
+void DisplayWordleMenu() //displaymenu + allow choice
+{
+    string choice = "";
+    while (!(choice == "Exit" || choice == "3"))
+    {
+        Console.WriteLine("\r\n░██╗░░░░░░░██╗░█████╗░██████╗░██████╗░██╗░░░░░███████╗\r\n░██║░░██╗░░██║██╔══██╗██╔══██╗██╔══██╗██║░░░░░██╔════╝\r\n░╚██╗████╗██╔╝██║░░██║██████╔╝██║░░██║██║░░░░░█████╗░░\r\n░░████╔═████║░██║░░██║██╔══██╗██║░░██║██║░░░░░██╔══╝░░\r\n░░╚██╔╝░╚██╔╝░╚█████╔╝██║░░██║██████╔╝███████╗███████╗\r\n░░░╚═╝░░░╚═╝░░░╚════╝░╚═╝░░╚═╝╚═════╝░╚══════╝╚══════╝");
+        Console.WriteLine("6 chances to guess a 5 letter word.\n");
+        Console.WriteLine("1. Play unlimited");
+        Console.WriteLine("2. Reset wordlist");
+        Console.WriteLine("3. Exit");
+        choice = Console.ReadLine();
+        if (choice == "1" || choice == "Play" || choice == "play")
+        {
+
+        }
+        else if (choice == "2" || choice == "Reset wordlist")
+        {
+
+        }
+    }
+}
+DisplayWordleMenu();
